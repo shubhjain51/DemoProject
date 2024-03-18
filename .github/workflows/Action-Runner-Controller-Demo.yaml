@@ -1,0 +1,13 @@
+name: Actions Runner Controller Demo
+on:
+  workflow_dispatch: 
+  #push:
+    #branches:
+       #- main
+
+jobs:
+  Explore-GitHub-Actions:
+    # You need to use the INSTALLATION_NAME from the previous step
+    runs-on: my-release-runner-latest
+    steps:
+    - run: echo "🎉 This job uses runner scale set runners!!"
