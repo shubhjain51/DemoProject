@@ -35,7 +35,7 @@ jobs:
             --push-retry 5 
         env: # needed to authenticate to github and download the repo
           GIT_USERNAME: "shubhjain51" 
-          GIT_PASSWORD: ${{ secrets.PATTOKEN }}
+          GIT_PASSWORD: ${{ secrets.PAT_TOKEN }}
           GH_REGISTRY: "ghcr.io"
           IMAGE_NAME: "${{ github.repository }}/nginx"
 
