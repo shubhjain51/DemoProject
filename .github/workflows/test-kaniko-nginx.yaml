@@ -30,7 +30,7 @@ jobs:
 
           /kaniko/executor --dockerfile="./workspace/Dockerfile" \
             --context="${{ github.repositoryUrl }}#${{ github.ref }}#${{ github.sha }}"  \
-            --destination="$GH_REGISTRY/$IMAGE_NAME:$(echo ${GITHUB_SHA} | head  -c 7)" \
+            --destination="ghcr.io/shubhjain51/kaniko-build:latest" \
             ${{ env.KANIKO_CACHE_ARGS }} \
             --push-retry 5 
         env: # needed to authenticate to github and download the repo
