@@ -50,7 +50,7 @@ ENV HOME /home/${USERNAME}
 # Make and set the working directory
 RUN mkdir -p /actions-runner \
     && chown -R $USERNAME:$GID /actions-runner
-RUN ls-la /actions-runner && echo $USERNAME && echo $GID
+RUN ls -la /actions-runner && echo "The files in the current directory are" $USERNAME $GID
 
 WORKDIR /actions-runner
 
